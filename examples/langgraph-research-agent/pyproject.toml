@@ -1,0 +1,23 @@
+[build-system]
+requires = [ "setuptools>=61.0" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langgraph-research-agent"
+version = "0.1.0"
+description = "Multi-agent research system using LangGraph and FriendliAI"
+requires-python = ">=3.11"
+dependencies = [
+  "friendli-app",
+  "langgraph>=0.2.0",
+  "langchain>=0.3.0",
+  "langchain-openai>=0.2.0",
+  "langchain-core>=0.3.0",
+  "openai>=1.0.0",
+  "pydantic>=2.0.0",
+  "fastapi>=0.100.0",
+  "python-dotenv>=1.0.0",
+]
+
+[tool.setuptools]
+py-modules = [ "main" ]

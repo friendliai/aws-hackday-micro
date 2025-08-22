@@ -1,0 +1,38 @@
+# Taplo TOML formatter configuration
+# https://taplo.tamasfe.dev/configuration/file.html
+
+[formatting]
+# Align entries vertically
+align_entries = false
+# Append trailing commas for multi-line arrays
+array_trailing_comma = true
+# Expand arrays into multiple lines when they exceed the column width
+array_auto_expand = true
+# Automatically collapse arrays if they fit on one line
+array_auto_collapse = true
+# Put trailing commas for inline tables
+inline_table_expand = false
+# Reorder keys
+reorder_keys = false
+# Maximum width of each line
+column_width = 100
+# Indent with spaces (2)
+indent_tables = false
+indent_entries = false
+# Preserve quotation marks for keys
+allowed_blank_lines = 1
+# Keep blank lines as they are
+crlf = false
+# Add spaces inside array brackets to match VSCode Even Better TOML
+compact_arrays = false
+compact_inline_tables = false
+
+[[rule]]
+# Apply specific formatting for pyproject.toml files
+include = [ "**/pyproject.toml" ]
+formatting = { reorder_keys = false, array_trailing_comma = true }
+
+[[rule]]
+# Apply specific formatting for Cargo.toml files
+include = [ "**/Cargo.toml" ]
+formatting = { reorder_keys = false }

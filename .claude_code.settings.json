@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "onFileChange": [
+      {
+        "match": "**/*.py",
+        "command": "ruff format ${file} && ruff check --fix ${file}"
+      },
+      {
+        "match": "**/*.toml",
+        "command": "taplo format ${file}"
+      }
+    ],
+    "postEdit": [
+      {
+        "match": "**/*.py",
+        "command": "ruff format ${file} && ruff check --fix ${file}"
+      },
+      {
+        "match": "**/*.toml",
+        "command": "taplo format ${file}"
+      }
+    ]
+  }
+}
